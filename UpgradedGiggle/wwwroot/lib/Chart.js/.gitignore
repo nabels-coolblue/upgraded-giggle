@@ -6,7 +6,11 @@ custom/*
 
 docs/index.md
 
+channel.sample.log
+
 bower_components/
+
+**/samples/*
 
 coverage/*
 
