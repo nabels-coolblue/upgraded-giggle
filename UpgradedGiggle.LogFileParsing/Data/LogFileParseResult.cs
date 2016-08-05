@@ -10,17 +10,17 @@ namespace UpgradedGiggle.LogFileParsing.Data
     {
         public bool Succeeded { get; set; }
 
-        public List<string> NormalLines { get; set; }
+        public List<NormalLine> NormalLines { get; set; }
 
         public List<ActionLine> ActionLines { get; set; }
 
-        public List<string> ThirdLines { get; set; }
+        public List<ThirdLine> ThirdLines { get; set; }
 
         public LogFileParseResult()
         {
-            NormalLines = new List<string>();
+            NormalLines = new List<NormalLine>();
             ActionLines = new List<ActionLine>();
-            ThirdLines = new List<string>();
+            ThirdLines = new List<ThirdLine>();
         }
     }
 }

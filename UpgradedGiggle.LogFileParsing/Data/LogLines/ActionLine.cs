@@ -8,5 +8,7 @@ namespace UpgradedGiggle.LogFileParsing.Data.LogLines
     public class ActionLine
     {
         public int Hour { get; set; }
+        public string Nick { get; set; }
+        public string Action { get; set; }
     }
 }
