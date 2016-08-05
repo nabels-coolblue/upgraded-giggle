@@ -15,10 +15,10 @@ namespace UpgradedGiggle.Controllers
 
             var random = new Random();
 
-            users.Add(new User() { Name = "tangent", NumberOfLines = random.Next(1, 2048) });
-            users.Add(new User() { Name = "alpha", NumberOfLines = random.Next(1, 2048) });
-            users.Add(new User() { Name = "azimuth", NumberOfLines = random.Next(1, 2048) });
-            users.Add(new User() { Name = "literal", NumberOfLines = random.Next(1, 2048) });
+            users.Add(new User() { Name = "tangent", NumberOfLines = random.Next(1, 200000) });
+            users.Add(new User() { Name = "alpha", NumberOfLines = random.Next(1, 200000) });
+            users.Add(new User() { Name = "azimuth", NumberOfLines = random.Next(1, 200000) });
+            users.Add(new User() { Name = "literal", NumberOfLines = random.Next(1, 200000) });
             
             return Json(
                 new string[][] {
