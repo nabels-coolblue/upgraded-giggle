@@ -61,6 +61,7 @@ namespace UpgradedGiggle.LogFileParsing.Tests
             var result = logFileParser.Parse(logFile);
 
             Assert.True(result.ActionLines.Count == 1);
+            Assert.True(result.ActionLines.First().Hour == 16);
         }
     }
 }
