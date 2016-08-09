@@ -1,0 +1,62 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3"></div>
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table">
+            <tr>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    @section scripts
+    {
+        <script>
+            var ctx = document.getElementById("myChart");
+
+            var userstats;
+
+            var colors = [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'];
+
+            $.getJSON('/Stats', function (data) {
+                console.log(data[0]);
+                console.log(data[1]);
+                
+                var myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: data[0],
+                        datasets: [{
+                            backgroundColor: colors,
+                            borderColor: colors,
+                            label: 'total # of lines',
+                            data: data[1],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        }
+                    }
+                });
+            });
+           
+        </script>        
+    }
