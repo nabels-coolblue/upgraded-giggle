@@ -1,4 +1,4 @@
-﻿{
+{
   "dependencies": {
     "Microsoft.NETCore.App": {
       "version": "1.0.0",
@@ -27,7 +27,8 @@
     "Microsoft.EntityFrameworkCore.Design": {
       "version": "1.0.0-preview2-final",
       "type": "build"
-    }
+    },
+    "UpgradedGiggle.LogFileParsing": "1.0.0-*"
   },
 
   "tools": {
